@@ -1,9 +1,12 @@
 import { Navbar } from '../components'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 
 function Main() {
+
+  const location = useLocation()
+
   return (
-    <div className='bg-gradient-to-r from-[#513EFF] to-[#52E5FF] flex flex-col w-full h-screen gap-y-4'>
+    <div className={`${location.pathname === '/' ? `bg-gradient-to-r from-[#513EFF] to-[#52E5FF]` : `bg-white`}  flex flex-col w-full h-screen gap-y-4`}>
         <Navbar/>
         <Outlet/>
     </div>

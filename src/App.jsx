@@ -4,7 +4,7 @@ import {
 
 } from 'react-router-dom'
 import { Main } from './layouts'
-import { Welcome } from './pages'
+import { Select, Welcome } from './pages'
 
 function App() {
   
@@ -16,6 +16,11 @@ function App() {
         {
           index: true,
           element: <Welcome/>
+        },
+
+        {
+          path: '/select',
+          element: <Select/>
         }
       ]
     }
