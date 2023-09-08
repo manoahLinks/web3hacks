@@ -4,7 +4,7 @@ import {
 
 } from 'react-router-dom'
 import { Main } from './layouts'
-import { Select, Welcome } from './pages'
+import { ChooseUsername, Select, Welcome } from './pages'
 
 function App() {
   
@@ -21,6 +21,11 @@ function App() {
         {
           path: '/select',
           element: <Select/>
+        },
+
+        {
+          path: '/choose-username',
+          element: <ChooseUsername/>
         }
       ]
     }
